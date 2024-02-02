@@ -113,9 +113,9 @@ jobs:
           container-name: ${{ env.CONTAINER_NAME }}
           image: ${{ secrets.REGISTRY }}/${{ env.REGISTRY_REPO_NAME }}:${{ github.run_number }} #Passing the variable for the image used. 
       
-       - name: Deploy Amazon ECS task definition
-         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
-         with:
+      - name: Deploy Amazon ECS task definition
+        uses: aws-actions/amazon-ecs-deploy-task-definition@v1
+        with:
           task-definition: ${{ steps.task-def.outputs.task-definition }} # this is using the previous step to update the service to deploy container with the new image.
           service: ${{ env.ECS_SERVICE }}
           cluster: ${{ env.ECS_CLUSTER }}
