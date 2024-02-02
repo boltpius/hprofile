@@ -1,6 +1,6 @@
 name: Hprofile Actions
 on: workflow_dispatch
-end:
+env:
   AWS_REGION: eu-west-1
   REGISTRY_REPO_NAME: githubaction
 jobs: 
