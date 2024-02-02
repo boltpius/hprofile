@@ -56,7 +56,8 @@ jobs:
        run: echo "The Quality Gate status is ${{ steps.sonarqube-quality-gate-check.outputs.quality-gate-status }}"
 
 
-  BUILD_AND_PUBLISH: 
+  BUILD_AND_PUBLISH:
+    needs: Testing #dependency that allows the test stage or job to run first before excuting this job.  
     runs-on: ubuntu-latest 
     steps: 
       - name: Code checkout
