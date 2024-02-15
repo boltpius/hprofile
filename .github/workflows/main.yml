@@ -1,5 +1,5 @@
 name: Hprofile Actions
-on: [push, workflow_dispatch] # this is to start the pipeline automatically when changes are made to source code. to run it mannually use "work_dispatch"
+on: [push, workflow_dispatch] # this is to start the pipeline automatically when changes are made to source code. to run it mannually use "workflow_dispatch"
 env:
   AWS_REGION: eu-west-1
   REGISTRY_REPO_NAME: githubaction
